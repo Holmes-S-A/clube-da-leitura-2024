@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ClubeDaLeitura.ConsoleApp.Amigo">
+    <Position X="2" Y="2.5" Width="1.75" />
+    <AssociationLine Name="HistoricoMultas" Type="ClubeDaLeitura.ConsoleApp.Multa">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.05" Y="0.173" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAiAAAAAAIAAAAAAAAAAAAAQAAAAAAAAEAEAA=</HashCode>
+      <FileName>Amigo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="HistoricoMultas" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClubeDaLeitura.ConsoleApp.Caixa">
+    <Position X="5.25" Y="7.5" Width="1.5" />
+    <AssociationLine Name="Revistas" Type="ClubeDaLeitura.ConsoleApp.Revista">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.89" Y="0.227" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAABAAAAAAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Caixa.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Revistas" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="ClubeDaLeitura.ConsoleApp.Emprestimo">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Revista" Type="ClubeDaLeitura.ConsoleApp.Revista">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.539" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAABBAAAAAAEAEAAA=</HashCode>
+      <FileName>Emprestimo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Revista" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClubeDaLeitura.ConsoleApp.Multa">
+    <Position X="2" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Multa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClubeDaLeitura.ConsoleApp.Reserva">
+    <Position X="2" Y="5.25" Width="1.75" />
+    <AssociationLine Name="Revista" Type="ClubeDaLeitura.ConsoleApp.Revista">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.443" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Amigo" Type="ClubeDaLeitura.ConsoleApp.Amigo">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.237" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAABAAAAIAEAAAAA=</HashCode>
+      <FileName>Reserva.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Revista" />
+      <Property Name="Amigo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ClubeDaLeitura.ConsoleApp.Revista">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Revista.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
