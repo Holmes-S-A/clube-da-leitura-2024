@@ -1,4 +1,6 @@
 ﻿using ClubeDaLeitura.ConsoleApp.Compartilhado;
+using ClubeDaLeitura.ConsoleApp.ModuloAmigo;
+using ClubeDaLeitura.ConsoleApp.ModuloCaixa;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +15,12 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
         {
             throw new NotImplementedException();
         }
+        public void CadastrarEntidadeTeste()
+        {
+            Revista revista = new Revista("Super Interessante", 2, 2011);
+
+            repositorio.Cadastrar(revista);
+        }
     }
 }
+

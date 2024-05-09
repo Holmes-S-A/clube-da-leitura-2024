@@ -1,4 +1,5 @@
 ﻿using ClubeDaLeitura.ConsoleApp.Compartilhado;
+using ClubeDaLeitura.ConsoleApp.ModuloReserva;
 
 namespace ClubeDaLeitura.ConsoleApp
 {
@@ -6,6 +7,12 @@ namespace ClubeDaLeitura.ConsoleApp
     {
         static void Main(string[] args)
         {
+
+            RepositorioReserva repositorioReserva = new RepositorioReserva();
+            TelaReserva telaReserva = new TelaReserva();
+            telaReserva.tipoEntidade = "Reserva";
+            telaReserva.repositorio = repositorioReserva;
+
             while (true)
             {
                 char opcaoPrincipalEscolhida = TelaPrincipal.ApresentarMenuPrincipal();
@@ -28,7 +35,7 @@ namespace ClubeDaLeitura.ConsoleApp
                     tela = tela;
 
                 else if (opcaoPrincipalEscolhida == '5')
-                    tela = tela;
+                    tela = telaReserva;
 
                 else if (opcaoPrincipalEscolhida == '6')
                     tela = tela;
@@ -39,16 +46,16 @@ namespace ClubeDaLeitura.ConsoleApp
                     continue;
 
                 if (operacaoEscolhida == '1')
-                    tela.();
+                    tela.Cadastrar();
 
-                else if (operacaoEscolhida == '2')
-                    tela.();
+                //else if (operacaoEscolhida == '2')
+                //    tela.();
 
-                else if (operacaoEscolhida == '3')
-                    tela.();
+                //else if (operacaoEscolhida == '3')
+                //    tela.();
 
-                else if (operacaoEscolhida == '4')
-                    tela.;
+                //else if (operacaoEscolhida == '4')
+                //    tela.;
             }
             Console.ReadLine();
         }

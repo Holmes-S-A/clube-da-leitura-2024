@@ -1,12 +1,14 @@
-﻿using System;
+﻿using ClubeDaLeitura.ConsoleApp.Compartilhado;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClubeDaLeitura.ConsoleApp.Reserva
+namespace ClubeDaLeitura.ConsoleApp.ModuloReserva
 {
-    internal class RepositorioReserva
+    internal class RepositorioReserva : RepositorioBase
     {
+        
     }
 }

@@ -27,5 +27,12 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
 
             return amigo;
         }
+
+        public void CadastrarEntidadeTeste()
+        {
+            Amigo amigo = new Amigo("Pedro", "Lucas", "49999054687", "rua hercilio luz");
+
+            repositorio.Cadastrar(amigo);
+        }
     }
 }
