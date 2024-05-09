@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClubeDaLeitura.ConsoleApp.Revista
+namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
 {
-    internal class TelaRevista
+    internal class TelaCaixa
     {
     }
 }

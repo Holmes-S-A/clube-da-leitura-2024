@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClubeDaLeitura.ConsoleApp.Amigo
+namespace ClubeDaLeitura.ConsoleApp.Reserva
 {
-    internal class TelaAmigo
+    internal class RepositorioReserva
     {
     }
 }
