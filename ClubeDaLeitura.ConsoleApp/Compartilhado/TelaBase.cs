@@ -27,7 +27,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
         {
             ApresentarCabecalho();
 
-            Console.WriteLine($"1 - ");
+            Console.WriteLine($"1 - Cadastrar {tipoEntidade} ");
             Console.WriteLine($"2 - ");
             Console.WriteLine($"3 - ");
             Console.WriteLine($"4 - ");

@@ -32,5 +32,12 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
 
             return revista;
         }
+        public void CadastrarEntidadeTeste()
+        {
+            Revista revista = new Revista("Super Interessante", 2, 2011);
+
+            repositorio.Cadastrar(revista);
+        }
     }
 }
+
