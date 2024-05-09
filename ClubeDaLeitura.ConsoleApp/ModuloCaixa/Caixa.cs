@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubeDaLeitura.ConsoleApp.Compartilhado;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +16,10 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
         public int TempoEmprestimo { get; set; }
 
         public ArrayList Revistas { get; set; }
+
+        public static explicit operator Caixa(EntidadeBase v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

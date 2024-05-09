@@ -34,10 +34,10 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
             ArrayList erros = new ArrayList();
 
             if (Amigo == null)
-                erros.Add("O \"amigo\" deve ser preenchido");
+                erros.Add("O id do \"amigo\" deve ser preenchido");
 
             if (Revista == null)
-                erros.Add("A \"revista\" deve ser preenchida");
+                erros.Add("O id da \"revista\" deve ser preenchido");
 
             return erros;
         }

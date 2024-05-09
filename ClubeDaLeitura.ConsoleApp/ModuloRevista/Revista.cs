@@ -42,7 +42,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
                 erros.Add("O \"ano\" da revista precisa ser maior que zero");
 
             if (Caixa == null)
-                erros.Add("A \"caixa\" deve ser preenchida");
+                erros.Add("O id da \"caixa\" deve ser preenchido");
 
             return erros;
         }
