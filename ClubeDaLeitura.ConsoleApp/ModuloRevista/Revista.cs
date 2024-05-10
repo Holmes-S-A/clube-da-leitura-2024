@@ -1,10 +1,6 @@
 ﻿using ClubeDaLeitura.ConsoleApp.Compartilhado;
 using ClubeDaLeitura.ConsoleApp.ModuloCaixa;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
 {
@@ -18,15 +14,13 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
         
         public Caixa Caixa { get; set; }
 
-
-        public Revista (string titulo, int numeroEdicao, int ano)
+        public Revista (string titulo, int numeroEdicao, int ano, Caixa caixa)
         {
             Titulo = titulo;
             NumeroEdicao = numeroEdicao;
             Ano = ano;
-            
+            Caixa = caixa;
         }
-
 
         public override ArrayList Validar()
         {
@@ -36,7 +30,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
                 erros.Add("O \"título\" da revista precisa ser preenchido");
 
             if (NumeroEdicao <= 0)
-                erros.Add("O \"número\" da edição da revista precisa ser maior que zero");
+                erros.Add("O \"número da edição\" da revista precisa ser maior que zero");
 
             if (Ano <= 0)
                 erros.Add("O \"ano\" da revista precisa ser maior que zero");

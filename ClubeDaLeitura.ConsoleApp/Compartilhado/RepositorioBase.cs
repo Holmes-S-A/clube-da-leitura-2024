@@ -36,12 +36,17 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
         {
             foreach (var cadastro in cadastros)
             {
-                EntidadeBase e = (EntidadeBase)cadastro;
+                EntidadeBase e = (EntidadeBase)cadastro; //forçando o cadastro a ser uma entidade base
 
                 if (e.Id == id)
                     return e;
             }
             return null;
+        }
+
+        public ArrayList SelecionarTodos()
+        {
+            return cadastros;
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using ClubeDaLeitura.ConsoleApp.Compartilhado;
 using ClubeDaLeitura.ConsoleApp.ModuloAmigo;
-using ClubeDaLeitura.ConsoleApp.ModuloCaixa;
 using ClubeDaLeitura.ConsoleApp.ModuloRevista;
-using System;
 using System.Collections;
 
 
@@ -10,22 +8,26 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloReserva
 {
     public class Reserva : EntidadeBase
     {
-        public DateTime DataAbertura { get; set; }
-
         public Amigo Amigo { get; set; }
 
         public Revista Revista { get; set; }
+        
+        public DateTime DataAbertura { get; set; }
+
+        public bool Expirada { private get; set; }
 
         public Reserva (Amigo amigo, Revista revista)
         {
-            DataAbertura = DateTime.Now;
             Amigo = amigo;
             Revista = revista;
+            DataAbertura = DateTime.Now;
+            Expirada = false;
         }
 
-        public bool ReservaEstaExpirada()
+        public bool EstaExpirada()
         {
-            return (DateTime.Now - DataAbertura).Days > 2;
+            Expirada = (DateTime.Now - DataAbertura).Days > 2 || Expirada;
+            return Expirada;
         }
 
         public override ArrayList Validar()

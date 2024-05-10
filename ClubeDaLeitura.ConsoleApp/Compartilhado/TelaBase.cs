@@ -23,24 +23,9 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
             Console.WriteLine();
         }
 
-        public char ApresentarMenu()
-        {
-            ApresentarCabecalho();
+        public abstract char ApresentarSubMenu();
 
-            Console.WriteLine($"1 - Cadastrar {tipoEntidade} ");
-            Console.WriteLine($"2 - ");
-            Console.WriteLine($"3 - ");
-            Console.WriteLine($"4 - ");
-
-            Console.WriteLine("S - Voltar");
-
-            Console.WriteLine();
-
-            Console.Write("Escolha uma das opções: ");
-            char operacaoEscolhida = Convert.ToChar(Console.ReadLine());
-
-            return operacaoEscolhida;
-        }
+        public abstract void ExecutarOperacoesEspecificas(char opcao);
 
         public abstract EntidadeBase ObterCadastro();
 
@@ -67,6 +52,9 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
             ExibirMensagem($"O {tipoEntidade} foi cadastrado com sucesso!", ConsoleColor.Green);
             
         }
+
+        public abstract void VisualizarCadastros(bool exibirTitulo);
+
         public void ApresentarErros(ArrayList erros)
         {
             Console.ForegroundColor = ConsoleColor.Red;
@@ -93,5 +81,6 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
             Console.ReadLine();
         }
 
+        public abstract void CadastrarEntidadeTeste();
     }
 }

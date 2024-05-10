@@ -26,7 +26,14 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
             Amigo = amigo;
             Revista = revista;
             DataEmprestimo = DateTime.Now;
+            DefinirDataDevolucao();
             Concluido = false;
+        }
+
+        private void DefinirDataDevolucao()
+        {
+            int quantidadeDias = Revista.Caixa.DiasEmprestimo;
+            DataDevolucao = DataEmprestimo.AddDays(quantidadeDias); 
         }
 
         public override ArrayList Validar()
@@ -38,6 +45,16 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
 
             if (Revista == null)
                 erros.Add("O id da \"revista\" deve ser preenchido");
+
+            foreach (var multa in Amigo.HistoricoMultas)
+            {
+                Multa m = (Multa)multa;
+                if (!m.EstaPaga)
+                {
+                    erros.Add("O amigo possui multa em aberto!");
+                    break;
+                }
+            }
 
             return erros;
         }

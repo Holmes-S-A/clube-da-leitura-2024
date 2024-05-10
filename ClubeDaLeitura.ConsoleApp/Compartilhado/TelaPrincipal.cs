@@ -18,12 +18,11 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
 
             Console.WriteLine();
 
-            Console.WriteLine("1 - Cadastrar amigo");
-            Console.WriteLine("2 - Cadastrar caixa de revistas");
-            Console.WriteLine("3 - Cadastrar revista");
-            Console.WriteLine("4 - Cadastrar empréstimo");
-            Console.WriteLine("5 - Cadastrar reserva");
-            Console.WriteLine("6 - Visualizar multas");
+            Console.WriteLine("1 - Gerenciar amigo");
+            Console.WriteLine("2 - Gerenciar caixa de revistas");
+            Console.WriteLine("3 - Gerenciar revista");
+            Console.WriteLine("4 - Gerenciar empréstimo");
+            Console.WriteLine("5 - Gerenciar reserva");
 
             Console.WriteLine("S - Sair");
 
@@ -31,7 +30,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
 
             Console.Write("Escolha uma das opções: ");
 
-            char opcaoEscolhida = Console.ReadLine()[0];
+            char opcaoEscolhida = Convert.ToChar(Console.ReadLine());
 
             return opcaoEscolhida;
         }

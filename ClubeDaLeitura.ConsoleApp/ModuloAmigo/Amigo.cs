@@ -25,6 +25,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
             NomeResponsavel = nomeResponsavel;
             Telefone = telefone;
             Endereco = endereco;
+            HistoricoMultas = new ArrayList();
         }
 
         public override ArrayList Validar()
@@ -44,12 +45,6 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
                 erros.Add("O \"endereço\" deve ser preenchido");
 
             return erros;
-        }
-        public void CadastrarEntidadeTeste()
-        {
-            Amigo amigo = new Amigo("Pedro", "Lucas", "49999054687", "rua hercilio luz");
-            
-            
         }
     }
 }
