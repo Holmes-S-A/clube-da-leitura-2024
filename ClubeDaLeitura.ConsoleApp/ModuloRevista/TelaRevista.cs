@@ -73,7 +73,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
                 "Caixa"
                 );
 
-            ArrayList revistasCadastradas = repositorio.SelecionarTodos();
+            List<EntidadeBase> revistasCadastradas = repositorio.SelecionarTodos();
 
             foreach (var revista in revistasCadastradas)
             {

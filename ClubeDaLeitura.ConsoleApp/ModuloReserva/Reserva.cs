@@ -30,9 +30,9 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloReserva
             return Expirada;
         }
 
-        public override ArrayList Validar()
+        public override List<string> Validar()
         {
-            ArrayList erros = new ArrayList();
+            List<string> erros = new List<string>();
 
             if (Amigo == null)
                 erros.Add("O Id do \"amigo\" que reservará a revista deve ser preenchido");

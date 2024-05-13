@@ -78,7 +78,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
                 "Endereço"
                 );
 
-            ArrayList amigosCadastrados = repositorio.SelecionarTodos();
+            List<EntidadeBase> amigosCadastrados = repositorio.SelecionarTodos();
 
             foreach (var amigo in amigosCadastrados)
             {

@@ -18,7 +18,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
         
         public int DiasEmprestimo { get; set; }
 
-        public ArrayList Revistas { get; set; }
+        public List<Revista> Revistas { get; set; }
 
         public Caixa(string cor, string etiqueta, int diasEmprestimo)
         {
@@ -27,9 +27,9 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
             DiasEmprestimo = diasEmprestimo;
         }
 
-        public override ArrayList Validar()
+        public override List<string> Validar()
         {
-            ArrayList erros = new ArrayList();
+            List<string> erros = new List<string>();
 
             if (string.IsNullOrEmpty(Cor))
                 erros.Add("A \"cor\" da caixa deve ser preenchida");

@@ -22,9 +22,9 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
             Caixa = caixa;
         }
 
-        public override ArrayList Validar()
+        public override List<string> Validar()
         {
-            ArrayList erros = new ArrayList();
+            List<string> erros = new List<string>();
 
             if (string.IsNullOrEmpty(Titulo))
                 erros.Add("O \"título\" da revista precisa ser preenchido");

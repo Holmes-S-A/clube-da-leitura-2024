@@ -91,7 +91,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
                 "Concluído"
                 );
 
-            ArrayList emprestimosCadastrados = repositorio.SelecionarTodos();
+            List<EntidadeBase> emprestimosCadastrados = repositorio.SelecionarTodos();
 
             foreach (var emprestimo in emprestimosCadastrados)
             {

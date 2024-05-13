@@ -36,9 +36,9 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
             DataDevolucao = DataEmprestimo.AddDays(quantidadeDias); 
         }
 
-        public override ArrayList Validar()
+        public override List<string> Validar()
         {
-            ArrayList erros = new ArrayList();
+            List<string> erros = new List<string>();
 
             if (Amigo == null)
                 erros.Add("O id do \"amigo\" deve ser preenchido");

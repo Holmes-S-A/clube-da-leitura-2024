@@ -61,7 +61,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
                 "Quantidade de Dias de Empréstimo"
                 );
 
-            ArrayList caixasCadastradas = repositorio.SelecionarTodos();
+            List<EntidadeBase> caixasCadastradas = repositorio.SelecionarTodos();
 
             foreach (var caixa in caixasCadastradas)
             {

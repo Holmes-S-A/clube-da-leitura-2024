@@ -17,7 +17,7 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
 
         public string Endereco { get; set; }
 
-        public ArrayList HistoricoMultas { get; set; }
+        public List<Multa> HistoricoMultas { get; set; }
 
         public Amigo(string nome, string nomeResponsavel, string telefone, string endereco)
         {
@@ -25,12 +25,12 @@ namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
             NomeResponsavel = nomeResponsavel;
             Telefone = telefone;
             Endereco = endereco;
-            HistoricoMultas = new ArrayList();
+            HistoricoMultas = new List<Multa>();
         }
 
-        public override ArrayList Validar()
+        public override List<string> Validar()
         {
-            ArrayList erros = new ArrayList();
+            List<string> erros = new List<string>();
 
             if (string.IsNullOrEmpty(Nome))
                 erros.Add("O \"nome\" do amigo deve ser preenchido");

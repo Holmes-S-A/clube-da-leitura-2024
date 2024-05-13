@@ -11,7 +11,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
 {
     internal abstract class RepositorioBase
     {
-        public ArrayList cadastros = new ArrayList();
+        public List<EntidadeBase> cadastros = new List<EntidadeBase>();
         public int contadorId = 1;
 
         public void Cadastrar(EntidadeBase novoCadastro)
@@ -44,7 +44,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
             return null;
         }
 
-        public ArrayList SelecionarTodos()
+        public List<EntidadeBase> SelecionarTodos()
         {
             return cadastros;
         }

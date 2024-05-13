@@ -39,7 +39,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
 
             EntidadeBase entidade = ObterCadastro();
 
-            ArrayList erros = entidade.Validar();
+            List<string> erros = entidade.Validar();
 
             if (erros.Count > 0)
             {
@@ -55,7 +55,7 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
 
         public abstract void VisualizarCadastros(bool exibirTitulo);
 
-        public void ApresentarErros(ArrayList erros)
+        public void ApresentarErros(List<string> erros)
         {
             Console.ForegroundColor = ConsoleColor.Red;
 
