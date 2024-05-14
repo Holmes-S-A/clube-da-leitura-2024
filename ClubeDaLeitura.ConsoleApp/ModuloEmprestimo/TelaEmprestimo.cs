@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloEmprestimo
 {
-    internal class TelaEmprestimo : TelaBase
+    internal class TelaEmprestimo : TelaBase, ITelaCadastravel
     {
         public TelaAmigo telaAmigo = null;
         public TelaRevista telaRevista = null;

@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloRevista
 {
-    internal class TelaRevista : TelaBase
+    internal class TelaRevista : TelaBase, ITelaCadastravel
     {
         public TelaCaixa telaCaixa = null;
         public RepositorioCaixa repositorioCaixa = null;

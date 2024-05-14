@@ -6,7 +6,7 @@ using System.Collections;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloReserva
 {
-    internal class TelaReserva : TelaBase
+    internal class TelaReserva : TelaBase, ITelaCadastravel
     {
         public TelaAmigo telaAmigo = null;
         public TelaRevista telaRevista = null;

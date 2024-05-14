@@ -20,18 +20,6 @@ namespace ClubeDaLeitura.ConsoleApp.Compartilhado
             cadastros.Add(novoCadastro);
         }
 
-        public bool Existe(int id)
-        {
-            foreach (var cadastro in cadastros)
-            {
-                EntidadeBase e = (EntidadeBase)cadastro;
-
-                if (e.Id == id)
-                    return true;
-            }
-            return false;
-        }
-
         public EntidadeBase SelecionarPeloId(int id)
         {
             foreach (var cadastro in cadastros)

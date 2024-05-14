@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloCaixa
 {
-    internal class TelaCaixa : TelaBase
+    internal class TelaCaixa : TelaBase, ITelaCadastravel
     {
         public override void ExecutarOperacoesEspecificas(char operacaoEscolhida)
         {

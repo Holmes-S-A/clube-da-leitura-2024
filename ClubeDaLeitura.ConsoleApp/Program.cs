@@ -11,70 +11,14 @@ namespace ClubeDaLeitura.ConsoleApp
     {
         static void Main(string[] args)
         {
-            RepositorioAmigo repositorioAmigo = new RepositorioAmigo();
-            TelaAmigo telaAmigo = new TelaAmigo();
-            telaAmigo.tipoEntidade = "Amigo";
-            telaAmigo.repositorio = repositorioAmigo;
-            telaAmigo.CadastrarEntidadeTeste();
-
-            RepositorioCaixa repositorioCaixa = new RepositorioCaixa();
-            TelaCaixa telaCaixa = new TelaCaixa();
-            telaCaixa.tipoEntidade = "Caixa";
-            telaCaixa.repositorio = repositorioCaixa;
-            telaCaixa.CadastrarEntidadeTeste();
-
-            RepositorioRevista repositorioRevista = new RepositorioRevista();
-            TelaRevista telaRevista = new TelaRevista();
-            telaRevista.tipoEntidade = "Revista";
-            telaRevista.repositorio = repositorioRevista;
-            telaRevista.telaCaixa = telaCaixa;
-            telaRevista.repositorioCaixa = repositorioCaixa;
-            telaRevista.CadastrarEntidadeTeste();
-
-            RepositorioEmprestimo repositorioEmprestimo = new RepositorioEmprestimo();
-            TelaEmprestimo telaEmprestimo = new TelaEmprestimo();
-            telaEmprestimo.tipoEntidade = "Empréstimo";
-            telaEmprestimo.repositorio = repositorioEmprestimo;
-            telaEmprestimo.telaAmigo = telaAmigo;
-            telaEmprestimo.telaRevista = telaRevista;
-            telaEmprestimo.repositorioAmigo = repositorioAmigo;
-            telaEmprestimo.repositorioRevista = repositorioRevista;
-            telaEmprestimo.CadastrarEntidadeTeste();
-
-            RepositorioReserva repositorioReserva = new RepositorioReserva();
-            TelaReserva telaReserva = new TelaReserva();
-            telaReserva.tipoEntidade = "Reserva";
-            telaReserva.repositorio = repositorioReserva;
-            telaReserva.telaAmigo = telaAmigo;
-            telaReserva.telaRevista = telaRevista;
-            telaReserva.repositorioAmigo = repositorioAmigo;
-            telaReserva.repositorioRevista = repositorioRevista;
-            telaReserva.repositorioEmprestimo = repositorioEmprestimo;
-            telaReserva.CadastrarEntidadeTeste();
+            TelaPrincipal telaPrincipal = new TelaPrincipal();
 
             while (true)
             {
-                char operacaoPrincipalEscolhida = TelaPrincipal.ApresentarMenuPrincipal();
+                ITelaCadastravel tela = telaPrincipal.ApresentarMenuPrincipal();
 
-                if (operacaoPrincipalEscolhida == 'S' || operacaoPrincipalEscolhida == 's')
+                if (tela == null)
                     break;
-
-                TelaBase tela = null;
-
-                if (operacaoPrincipalEscolhida == '1')
-                    tela = telaAmigo;
-
-                else if (operacaoPrincipalEscolhida == '2')
-                    tela = telaCaixa;
-
-                else if (operacaoPrincipalEscolhida == '3')
-                    tela = telaRevista;
-
-                else if (operacaoPrincipalEscolhida == '4')
-                    tela = telaEmprestimo;
-
-                else if (operacaoPrincipalEscolhida == '5')
-                    tela = telaReserva;
 
                 char operacaoEscolhida = tela.ApresentarSubMenu();
 

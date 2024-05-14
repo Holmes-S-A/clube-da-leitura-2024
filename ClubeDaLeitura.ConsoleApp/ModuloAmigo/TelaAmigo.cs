@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ClubeDaLeitura.ConsoleApp.ModuloAmigo
 {
-    internal class TelaAmigo : TelaBase
+    internal class TelaAmigo : TelaBase, ITelaCadastravel
     {
         public override void ExecutarOperacoesEspecificas(char operacaoEscolhida)
         {
